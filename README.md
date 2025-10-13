@@ -181,3 +181,28 @@ Istruzioni per creare una sottorete:
 ```bash
 docker network create rete-nginx 
 ```
+-----------------------------------------------
+
+Istruzioni per spostare un container nella nuova sottorete di nome myNetwork creata\
+1) premi sul nome in blu del container che voglio spostare
+2) premo su duplicate/edit
+<img width="861" height="722" alt="Screenshot 2025-10-13 alle 16 48 28" src="https://github.com/user-attachments/assets/bf07cd3d-3b93-49cf-b776-c4bea0f75975" />
+3) sul menù a tendina dei network seleziono myNetwork
+   <img width="884" height="721" alt="Screenshot 2025-10-13 alle 16 49 01" src="https://github.com/user-attachments/assets/c7341fb3-39b4-4911-8d78-15c46c3f0ef4" />
+4) deploy the container (con rimpiazzo)
+
+Oppure da terminale 
+```bash
+docker network ls    # per lista dei network
+docker network connect [nome_rete] [nome_container]
+```
+Uno stesso container può appartenere a diversi segmenti di rete; infatti se vado sulla shell del container 
+
+```bash
+apt update
+apt install net-tools     # per usare ifconfig
+ifconfig
+```
+mi esce che ho PIU' INTERFACCE DI RETE 
+<img width="862" height="693" alt="Screenshot 2025-10-13 alle 17 02 52" src="https://github.com/user-attachments/assets/798f19d8-bbb0-44ad-a7e5-313fa2678cf7" />
+
