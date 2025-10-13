@@ -207,10 +207,10 @@ mi esce che ho PIU' INTERFACCE DI RETE
 <img width="862" height="693" alt="Screenshot 2025-10-13 alle 17 02 52" src="https://github.com/user-attachments/assets/798f19d8-bbb0-44ad-a7e5-313fa2678cf7" />
 
 ---------------------------------------------------
-* Esercitazione *
+* Esercitazione 
 Installa ubuntu su portainer\
 Cerco su templates -> applicazioni -> search: ubuntu -> configuro e deployt -> apro la shell con >_ \
-Configura e installa ssh:\
+Configura e installa ssh:
 ```bash
 apt get update
 apt install -y openssh-server
