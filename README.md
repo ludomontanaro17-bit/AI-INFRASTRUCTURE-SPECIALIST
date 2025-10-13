@@ -138,11 +138,24 @@ Per aprirlo sul web http//127.0.0.1 (posso non inserire il numero di porta perch
 
 Modifica la pagina di benvenuto di nginx con "Ciao sono Ludovica"
 ```bash
-# tramite dock.ai ho visto che dovevo entrare qua
-cd /srv
-
+docker exec -it [container_id] /bin/bash # per aprire la shell del container
+apt update   # aggiorno elenco repository
+apt install nano # serve per installare il comando
+(apt search java  # mi da l'elenco dei pacchetti che posso installare)
+apt upgrade   # per aggiornare i pacchetti con le ultime versioni
+( cd /etc/apt  # mi serve per i pacchetti 
+  ls -la       #entro in debian.source con cat per capire le corrispondenze per pescare il software
+nano debian.source # aggiorno le repositories )
+which nginx # dove è la cartella nginx
+cd /usr/sbin/nginx # per scendere nella cartella
+cd /usr/share/nginx
+cd html/
+nano index.html  -----> da qua modifica la scritta di benvenuto
+touch about_me.html
+nano about_me.html -----> in html posso scrivere cose
 ```
 
+`
 
 
 
