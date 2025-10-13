@@ -2,107 +2,146 @@
 
 Cap 1 COMANDI LINUX <br>
 Cap 2 INTRODUZIONE ALLE RETI <br>
-Cap 3
+Cap 3 DOCKER 
 
-# COMANDI LINUX 
-Linux è **case sensitive**.\
-**root**  :Linux has an administrator or superuser account, designed for use by a trusted person who can do nearly anything on the system. This would include such things as reconfiguring the system, adding users, and changing passwords. In Linux, that account is called root. As a hacker or pentester, you will often use the root account to give yourself control over the system. In fact, many hacker tools require that you use the root account.
-
-
-**Script** : This is a series of commands run in an interpretive environment that converts each line to source code. Many hacking tools are simply scripts. Scripts can be run with the bash interpreter or any of the other scripting language interpreters, such as Python, Perl, or Ruby. Python is currently the most popular interpreter among hackers.
-
-**Shell** : This is an environment and interpreter for running commands in Linux. 
-
-<img width="666" alt="Screenshot 2024-02-15 alle 10 55 41" src="https://github.com/MrMagicalSoftware/linux-for-hacker-and-pentester/assets/98833112/5070c9ec-06e4-4b27-a4be-77b150bcfc27">
-
-1. **/ (root):** La directory radice del sistema di file. Tutti i file e le directory si trovano sotto questa directory principale.
-
-2. **/bin (binary):** Contiene i file binari essenziali necessari per il funzionamento del sistema e il ripristino in caso di problemi.
-
-3. **/boot:** Contiene i file necessari per il caricamento del kernel Linux durante l'avvio del sistema.
-
-4. **/dev (devices):** Contiene file speciali che rappresentano dispositivi hardware. Ad esempio, i file nella directory /dev possono rappresentare dischi, dispositivi di input, ecc.
-
-5. **/etc (et cetera):** Contiene i file di configurazione del sistema. Qui si trovano molte configurazioni globali del sistema e delle applicazioni.
-
-6. **/home:** Questa è la directory principale per gli utenti del sistema. Ogni utente ha la propria sottodirectory qui, ad esempio, /home/nomeutente.
-
-7. **/lib (library):** Contiene le librerie condivise essenziali necessarie per il funzionamento del sistema e dei programmi di sistema.
-
-8. **/media:** Utilizzato per montare temporaneamente dispositivi rimovibili come chiavette USB o unità CD/DVD.
-
-9. **/mnt (mount):** Utilizzato per montare temporaneamente file system aggiuntivi o dispositivi di archiviazione.
-
-10. **/opt (optional):** Spazio destinato per l'installazione di software aggiuntivo che non fa parte del sistema principale.
-
-11. **/proc:** Un file system virtuale che fornisce informazioni sul kernel, i processi e il sistema in tempo reale.
-
-12. **/root:** La directory home dell'utente root, l'amministratore del sistema.
-
-13. **/sbin (system binaries):** Contiene i file binari di sistema essenziali utilizzati solo dall'amministratore del sistema.
-
-14. **/srv (service):** Contiene dati specifici del servizio fornito da questo sistema.
-
-15. **/tmp (temporary):** Utilizzato per archiviare file temporanei. Il contenuto di questa directory viene cancellato durante il riavvio del sistema.
-
-16. **/usr (user):** Contiene la maggior parte dei programmi e dei file a cui gli utenti accedono regolarmente. Spesso separato in /usr/bin, /usr/lib, ecc.
-
-17. **/var (variable):** Contiene dati variabili, come log di sistema, file di stampa e altri dati che possono variare nel tempo.
-
-## COMANDI ESSENZIALI 
+# Capitolo 1 COMANDI LINUX
+Per i comandi principali vedere la repository https://github.com/ludomontanaro17-bit/linux-for-hacker-and-pentester
+Inoltre
+```bash                 
+chmod -r folder/                             # tolgo il permesso di lettura a tutti i files della directory folder
+chmod -R 777 folder/                         # cambio tutti i permessi di tutti i files nella directory folder
+history > file.txt                           # salvo la history (lista comandi precedenti) nel file fil.txt
+find /home/user -name "*.txt"                # cerco tutti i file di tipo *.txt nella directory specificata dal                                                   # percorso assoluto
+tree / L 1                                   # albero a profondità limitata
+read -p numero_                              # operazione io bloccante
+cp *.txt backup/                             # copio tutti i file con estensione .txt nella directory backup
+more uno.txt                                 # alternativa a cut
+less uno.txt
+[comando] | at [time scheduling]             # per installarlo apt get install at
+atq                                          # visualizzo elenco lavori in programma -> mi rida ID dei lavori
+atrm [ID]                                 # annullo lavoro programmato
+grep "pattern" file.txt                   # cerco l'espressione pattern nel file file.txt
+grep -r "funzione"                        # cerco la stringa funzione in tutti i file della directory corrente e varie sottodirectory
+grep -n "warning" file.txt                # mostra le righe in cui appare warning e i numeri di riga
+grep -i "esempio" file.txt                # cerco ignorando maiuscole e minuscole
+```
 
 
-Il comando `whoami` in un sistema Unix/Linux restituisce il nome dell'utente che attualmente ha effettuato l'accesso al sistema. In altre parole, mostra il nome dell'utente associato all'identità corrente dell'esecuzione del comando.
+# Capitolo 2 INTRODUZIONE ALLE RETI 
+```bash
+service [nome_servizio] [azione]
+sudo systemctl start [nome_servizio]
+sudo systemctl stop [nome_servizio]
+sudo systemctl restart [nome_servizio]
+sudo systemctl reload [nome_servizio]
+sudo systemctl status [nome_servizio]
+sudo systemctl enable [nome_servizio]
+sudo systemctl disable [nome_servizio]
+sudo systemctl is-enabled [nome_servizio]
+systemctl status xrdp                 # servizio di desktop da remoto
+ssh nome_utente@indirizzo_ip -p numero_di_porta
+chown username file.txt
+sudo apt get install java
+sudo nano /etc/hosts
+adduser Mario
+cat /etc/passwd                       # fa vedere gli utenti nei gruppi
+```
+```bash
+traceroute [IP_che_voglio_raggiungere]
+ping [IP_che_voglio_raggiungere]
+ping -c 4 [IP_che_voglio_raggiungere]
+sudo nmap -sS [IP_che_voglio_raggiungere]         # per vedere se una macchina è effettivamente accesa
+ifconfig | grep 192                               # per vedere indirizzo IP (inet), broadcast e netmask
+nmap -v google.it                                 # quali porte sono aperte sulla macchina di google?
+nmap -vv [IP]                                     # più informazioni
+nmap -v -sV [IP]                                  # software e numero di versione
+nmap -v -p- [IP]                                  # scansiono tutte le porte
+nmap -r [IP]                                      # scansiono tutte le porte in maniera consecutiva
+last                                              # quali e quando gli utenti si sono collegati
+telnet [IP] [numero_di_porta]                     # se una porta è aperta o meno e serve per interagire con i servizi a livello testuale con i rispettivi comandi relativi
+nc [IP] [numero_di_porta]                         # più potente di telnet
+```
 
-Per utilizzare il comando `whoami`, apri il terminale e digita semplicemente:
+
+
+
+# Capitolo 3 DOCKER 
 
 ```bash
-whoami
+docker ps                        # mostra tutti i container attivi
+docker ps -a                     # mostra tutti i container attivi e non attivi
+docker images                    # immagini scaricate e quanto pesano
+docker run -p [porta_esterna]:[porta_interna] [nome_immagine] --name [nome_container]
+docker rmi [image_name]          # rimuovo un'immagine
+docker rm [id_container]         # rimuovo un container
+docker start [id_container]      # avvio un container fermato
+docker stop [id_container]       # stoppo un container attivo
+docker stop [id_container]; docker rm [id_container] # stoppo e rimuovo un container 
 ```
 
-Dopo aver premuto Invio, il terminale mostrerà il nome dell'utente associato alla sessione corrente.
+NOTA: invece dell'[id_container] posso usare solo le prime tre cifre.
 
-Ad esempio, se sei loggato come utente "john", il comando `whoami` restituirà:
-
-```
-john
-```
-
-Questo comando è utile quando si lavora con script o comandi che richiedono informazioni sull'utente corrente. Può essere usato anche per verificare rapidamente sotto quale identità si sta eseguendo il terminale in un dato momento.
-
-
-
-**COMANDO pwd**
-
-Il comando `pwd` (Print Working Directory) in un sistema Unix/Linux restituisce il percorso completo (path) della directory corrente in cui ti trovi nel terminale. Quando lo esegui, il terminale mostra il percorso completo dalla radice del file system fino alla directory corrente.
-
-Per utilizzare il comando `pwd`, basta digitare il comando nel terminale e premere Invio:
+Per installare PORTAINER https://docs.portainer.io/start/install-ce/server/docker/linux
 
 ```bash
-pwd
+docker volume create portainer_data           # creo un volume (o zona di lavoro) dedicata al container
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+docker ps -a                                 # per vedere se è attivo
+```
+poi per aprire la pagina sul web https://127.0.0.1:9443
+
+NOTA: se dice che per sicurezza è finito il tempo fai 
+```bash
+docker ps
+docker stop [id_container]
+docker start [id_container]
+```
+e poi riapri https://127.0.0.1:9443.
+
+Per risettare la password dello user 
+```bash
+docker stop "id-portainer-container"
+docker pull portainer/helper-reset-password
+docker run --rm -v portainer_data:/data portainer/helper-reset-password
+
+```
+If successful, the output should look like this:
+```bash
+2020/06/04 00:13:58 Password successfully updated for user: admin
+2020/06/04 00:13:58 Use the following password to login: &_4#\3^5V8vLTd)E"NWiJBs26G*9HPl1
+
+```
+If the helper is unable to find an admin user to update, it will create a new one for you. If the username admin is already used, it will create a user named admin-[randomstring]:
+
+```bash
+2022/08/10 07:36:33 [WARN] Unable to retrieve user with ID 1, will try to create, err: object not found inside the database
+2022/08/10 07:36:33 Admin user admin-u0512b3f0v4dqk7o successfully created
+2022/08/10 07:36:33 Use the following password to login: Sr#]YL_6D0k8Pd{pA9^|}F32j5J4I=av
 ```
 
-Il risultato sarà il percorso completo della directory corrente. Ad esempio:
+e poi per riattivare il container
+```bash
+docker start "id-portainer-container"
+```
+e poi per riloggarmi
+https://127.0.0.1:9443.
+
+Clicca su local
+
+<img width="871" height="480" alt="Screenshot 2025-10-13 alle 12 22 04" src="https://github.com/user-attachments/assets/d873c75a-ff08-4d9d-bf3d-3cf1a2da3b24" />
+<img width="869" height="686" alt="Screenshot 2025-10-13 alle 12 23 49" src="https://github.com/user-attachments/assets/22984ce4-04cc-4278-8c24-33672a4ba111" />
+<img width="870" height="721" alt="Screenshot 2025-10-13 alle 12 27 59" src="https://github.com/user-attachments/assets/4027232d-f0ce-4542-ba3d-b970ea8d85b9" />
+metti come porte dell'host 80 e 443
+<img width="860" height="710" alt="Screenshot 2025-10-13 alle 12 28 05" src="https://github.com/user-attachments/assets/e426587e-6d3c-44e3-9a41-7d4b20aa5f28" />
+Per vedere se funziona -> DEPLOY THE CONTAINERS
+Per aprirlo sul web http//127.0.0.1 (posso non inserire il numero di porta perchè coincide con quella privata)
+
+Modifica la pagina di benvenuto di nginx con "Ciao sono Ludovica"
+```bash
+# tramite dock.ai ho visto che dovevo entrare qua
+cd /srv
 
 ```
-/home/tuo_utente
-```
-
-Questo è particolarmente utile quando si naviga tra le directory o si lavora con file e cartelle in modo da sapere sempre in quale posizione del sistema di file ci si trova.
-
-
-___________________________________
-
-
-
-
-
-
-
-
-
-
-
 
 
 
