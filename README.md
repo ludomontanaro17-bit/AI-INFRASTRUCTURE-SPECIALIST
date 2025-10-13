@@ -154,10 +154,30 @@ nano index.html  -----> da qua modifica la scritta di benvenuto
 touch about_me.html
 nano about_me.html -----> in html posso scrivere cose
 ```
+```bash
+which nginx     # dove si trovano con relativo percorso
+whereis nginx
+```
+```bash
+apt update   # aggiorno elenco repository
+apt install nano # serve per installare il comando
+apt search java  # mi da l'elenco dei pacchetti che posso installare
+apt upgrade   # per aggiornare i pacchetti con le ultime versioni
+```
+---------------------------------------------
+Dopo aver creato un nuovo container di nginx (stando attenta a non fare errore di binding di porte), devo aprire il terminale e pingare l'altro container:
+```bash
+apt update
+apt install iputils-ping
+ping [ID_altra_macchina]
+```
+----------------------------------------------
+Invece di verificare una ad una se le macchine siano connesse con ping posso faee
+```bash
+nmap -v -sn 192.168.1.1-255     # scansionami gli indirizzi nel segmento di rete da 1 a 255
+```
 
-`
-
-
-
-
-
+Istruzioni per creare una sottorete:
+```bash
+docker network create rete-nginx 
+```
