@@ -81,11 +81,15 @@ docker stop [id_container]; docker rm [id_container] # stoppo e rimuovo un conta
 
 NOTA: invece dell'[id_container] posso usare solo le prime tre cifre.
 
-Per installare PORTAINER https://docs.portainer.io/start/install-ce/server/docker/linux
+## Per installare PORTAINER https://docs.portainer.io/start/install-ce/server/docker/linux
 
 ```bash
 docker volume create portainer_data           # creo un volume (o zona di lavoro) dedicata al container
+```
+```bash
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
+```
+```bash
 docker ps -a                                 # per vedere se è attivo
 ```
 poi per aprire la pagina sul web https://127.0.0.1:9443
@@ -93,15 +97,23 @@ poi per aprire la pagina sul web https://127.0.0.1:9443
 NOTA: se dice che per sicurezza è finito il tempo fai 
 ```bash
 docker ps
+```
+```bash
 docker stop [id_container]
+```
+```bash
 docker start [id_container]
 ```
 e poi riapri https://127.0.0.1:9443.
 
-Per risettare la password dello user 
+### Per risettare la password dello user 
 ```bash
 docker stop "id-portainer-container"
+```
+```bash
 docker pull portainer/helper-reset-password
+```
+```bash
 docker run --rm -v portainer_data:/data portainer/helper-reset-password
 
 ```
@@ -136,39 +148,74 @@ metti come porte dell'host 80 e 443
 Per vedere se funziona -> DEPLOY THE CONTAINERS
 Per aprirlo sul web http//127.0.0.1 (posso non inserire il numero di porta perchè coincide con quella privata)
 
-Modifica la pagina di benvenuto di nginx con "Ciao sono Ludovica"
+## Modifica la pagina di benvenuto di nginx con "Ciao sono Ludovica"
 ```bash
 docker exec -it [container_id] /bin/bash # per aprire la shell del container
+```
+```bash
 apt update   # aggiorno elenco repository
+```
+```bash
 apt install nano # serve per installare il comando
+```
+```bash
 (apt search java  # mi da l'elenco dei pacchetti che posso installare)
+```
+```bash
 apt upgrade   # per aggiornare i pacchetti con le ultime versioni
-( cd /etc/apt  # mi serve per i pacchetti 
+```
+```bash
+ cd /etc/apt  # mi serve per i pacchetti 
   ls -la       #entro in debian.source con cat per capire le corrispondenze per pescare il software
-nano debian.source # aggiorno le repositories )
+nano debian.source # aggiorno le repositories ```
+```bash
 which nginx # dove è la cartella nginx
+```
+```bash
 cd /usr/sbin/nginx # per scendere nella cartella
+```
+```bash
 cd /usr/share/nginx
+```
+```bash
 cd html/
+```
+```bash
 nano index.html  -----> da qua modifica la scritta di benvenuto
+```
+```bash
 touch about_me.html
+```
+```bash
 nano about_me.html -----> in html posso scrivere cose
 ```
 ```bash
-which nginx     # dove si trovano con relativo percorso
-whereis nginx
+which nginx     # dove si trovano ESEGUIBILI con relativo percorso
+```
+```bash
+whereis nginx   # per eseguibili e stringhe 
 ```
 ```bash
 apt update   # aggiorno elenco repository
+```
+```bash
 apt install nano # serve per installare il comando
+```
+```bash
 apt search java  # mi da l'elenco dei pacchetti che posso installare
+```
+```bash
 apt upgrade   # per aggiornare i pacchetti con le ultime versioni
 ```
 ---------------------------------------------
 Dopo aver creato un nuovo container di nginx (stando attenta a non fare errore di binding di porte), devo aprire il terminale e pingare l'altro container:
 ```bash
 apt update
+```
+```bash
 apt install iputils-ping
+```
+```bash
 ping [ID_altra_macchina]
 ```
 ----------------------------------------------
@@ -177,13 +224,13 @@ Invece di verificare una ad una se le macchine siano connesse con ping posso fae
 nmap -v -sn 192.168.1.1-255     # scansionami gli indirizzi nel segmento di rete da 1 a 255
 ```
 
-Istruzioni per creare una sottorete:
+## Istruzioni per creare una sottorete:
 ```bash
 docker network create rete-nginx 
 ```
 -----------------------------------------------
 
-Istruzioni per spostare un container nella nuova sottorete di nome myNetwork creata\
+## Istruzioni per spostare un container nella nuova sottorete di nome myNetwork creata\
 1) premi sul nome in blu del container che voglio spostare
 2) premo su duplicate/edit
 <img width="861" height="722" alt="Screenshot 2025-10-13 alle 16 48 28" src="https://github.com/user-attachments/assets/bf07cd3d-3b93-49cf-b776-c4bea0f75975" />
@@ -194,13 +241,19 @@ Istruzioni per spostare un container nella nuova sottorete di nome myNetwork cre
 Oppure da terminale 
 ```bash
 docker network ls    # per lista dei network
+```
+```bash
 docker network connect [nome_rete] [nome_container]
 ```
 Uno stesso container può appartenere a diversi segmenti di rete; infatti se vado sulla shell del container 
 
 ```bash
 apt update
+```
+```bash
 apt install net-tools     # per usare ifconfig
+```
+```bash
 ifconfig
 ```
 mi esce che ho PIU' INTERFACCE DI RETE 
@@ -208,11 +261,15 @@ mi esce che ho PIU' INTERFACCE DI RETE
 
 ---------------------------------------------------
 * Esercitazione 
-Installa ubuntu su portainer\
+## Installa ubuntu su portainer
 Cerco su templates -> applicazioni -> search: ubuntu -> configuro e deployt -> apro la shell con >_ \
-Configura e installa ssh:
+**Configura e installa ssh:**
 ```bash
 apt get update
+```
+```bash
 apt install -y openssh-server
+```
+```bash
 service ssh start 
 ```
