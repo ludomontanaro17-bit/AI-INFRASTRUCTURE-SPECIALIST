@@ -268,7 +268,12 @@ mi esce che ho PIU' INTERFACCE DI RETE
 * Esercitazione 
 ## Installa ubuntu su portainer
 Cerco su templates -> applicazioni -> search: ubuntu -> configuro e deployt -> apro la shell con >_ \
-MAPPA LE PORTE DALL'INIZIO ALTRIMENTI DEVO FARE UN REPLACEMENT DEI CONTAINER E PERDO TUTTE LE COSE CHE HO INSTALLATO. (ALTRIMENTI VAI SU **duplicate/edit* -> MAPPO 22:22)
+Per aprire la shell da terminale posso anche usare il comando 
+```bash
+docker exec -it [id_container] /bin/bash
+```
+e mi ritroverò sulla shell del container in questione.\
+MAPPA LE PORTE DALL'INIZIO ALTRIMENTI DEVO FARE UN REPLACEMENT DEI CONTAINER E PERDO TUTTE LE COSE CHE HO INSTALLATO. (ALTRIMENTI VAI SU *duplicate/edit* -> MAPPO 22:22)
 ## Configura e installa ssh:
 ```bash
 apt get update
