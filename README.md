@@ -382,6 +382,24 @@ Se mi sono collegata bene dalla macchina web_001 sulla macchina ubuntu (con id 1
 
 
 
+# DOCKER CREATE IMAGES
+## file sorgente -> build image -> runno il container
+Voglio deployare l'app come se fosse un container di docker.\
+## Scrivo il mio codice sorgente su Virtual Studio code
+Installazione di visual studio code: https://code.visualstudio.com/download\
+
+Il comando node è utilizzato per eseguire applicazioni JavaScript sul server, senza la necessità di un browser.\
+Installo da terminale **node**: 
+```bash
+choco install nodejs-lts # per Windows
+apt get install node     # per Linux
+brew install node        # per Mac
+```
+Per verificare l'installazione questo codice dovrebbe ridare una cosa del tipo v24.10.0
+
+```bash
+node -v 
+```
 
 
 
@@ -391,4 +409,30 @@ Se mi sono collegata bene dalla macchina web_001 sulla macchina ubuntu (con id 1
 
 
 
-## Installazione di visual studio code https://code.visualstudio.com/download
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
