@@ -316,8 +316,13 @@ adduser ludo
 ```bash
 ssh ludo@[id_ubuntu]
 ```
-Il collegamento è rifiutato se sono su segmenti di rete diversi.
+Il collegamento è rifiutato se sono su segmenti di rete diversi. 
+
+<img width="573" height="134" alt="Screenshot 2025-10-14 alle 10 58 29" src="https://github.com/user-attachments/assets/6bad68e6-f099-4dc0-b482-150e40301dab" />
+Mi fa capire che sono su due segmenti di rete diversi e quindi è ovvio che non potrò connettere le due macchine dato che la mia ha ip 192... e la macchina in questione 172...
+
 ## Mi collego dal container web_001 sul container ubuntu
+In teoria lo posso fare perchè condividono lo stesso segmento di rete come si evince dagli IP che sono 172.17.0.4 e 172.17.0.3
 Vado sulla shell di web_001
 ```bash
 apt update
@@ -331,6 +336,7 @@ ssh ludo@[id_di_ubuntu]
 ```
 
 ----------------------------------------------------------------
+Oppure in maniera più elegante creo un file in ssh e lo eseguo
 ```bash
 apt update
 ```
@@ -370,10 +376,9 @@ passwd
 ```bash
 passwd [nome_utente]    # l'utente root può modificare le password degli altri utenti così
 ```
-Mi fa capire che sono su due segmenti di rete diversi e quindi è ovvio che non potrò connettere le due macchine dato che la mia ha ip 192... e la macchina in questione 172...
-<img width="573" height="134" alt="Screenshot 2025-10-14 alle 10 58 29" src="https://github.com/user-attachments/assets/6bad68e6-f099-4dc0-b482-150e40301dab" />
 
-
+Se mi sono collegata bene dalla macchina web_001 sulla macchina ubuntu (con id 172.17.0.4) esce questo
+<img width="748" height="551" alt="Screenshot 2025-10-14 alle 11 11 01" src="https://github.com/user-attachments/assets/e3b45f31-78e1-47f0-baec-0ed7e1f76c84" />
 
 
 
