@@ -331,7 +331,38 @@ ssh ludo@[id_di_ubuntu]
 ```
 
 ----------------------------------------------------------------
+```bash
+apt update
+```
+```bash
+apt install nano
+```
+```bash
+nano file.ssh
+```
+```bash
+#!/bin/bash 
 
+echo "Installing ssh server on Machine"
+
+apt update
+apt install openssh-server -y 
+
+echo "Enable root access"
+sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/s>
+sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+```
+```bash
+ls -la file.ssh    # mancano i permessi
+```
+```bash
+chmode +x file.ssh   # setto i permessi
+```
+```bash
+./file.ssh    # per far girare il programma 
+
+
+```
 
 
 ## Installazione di visual studio code https://code.visualstudio.com/download
