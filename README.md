@@ -435,17 +435,15 @@ cd src       # per entrare nella cartella
 ```bash
 sudo npm install     
 ```
-```bash
-node server.js     # verifico se è andato
-```
-
-<img width="755" height="280" alt="Screenshot 2025-10-14 alle 14 30 26" src="https://github.com/user-attachments/assets/6f85d53e-99ca-4eff-9ab1-f15706e53001" />
 
 Quindi per vedere 'ok' devo scrivere su internet https://127.0.0.1:3000 \
 E per vedere 'Pagina dei contatti' devo scrivere su internet https://127.0.0.1:3000/contatti 
 
-
-
+Prima di dockerizzare devo vedere se l'applicazione funziona 
+```bash
+node server.js     # verifico se è andato con control+c si ferma
+```
+e mi deve riuscire 
 
 
 
