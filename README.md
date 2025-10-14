@@ -509,10 +509,14 @@ docker images | grep app
 
 Runno l'immagine che ho
 
+```bash
+docker run -d -p 3000:3000 app-express-image --name [nome_container]
+```
+
 <img width="566" height="69" alt="Screenshot 2025-10-14 alle 15 41 09" src="https://github.com/user-attachments/assets/a0bcc765-bdb3-4ae6-b34c-7879960b4acd" />
 
 
-<img width="668" height="599" alt="Screenshot 2025-10-14 alle 16 17 24" src="https://github.com/user-attachments/assets/1eded9d5-8ddf-4ee6-ad9b-a2cdc2e9f943" />
+<img width="668" height="537" alt="Screenshot 2025-10-14 alle 16 18 53" src="https://github.com/user-attachments/assets/d8d927bd-a82c-4338-8856-3fb70da6741e" />
 
 
 
