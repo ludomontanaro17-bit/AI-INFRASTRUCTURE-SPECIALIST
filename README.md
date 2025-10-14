@@ -273,3 +273,5 @@ apt install -y openssh-server
 ```bash
 service ssh start 
 ```
+
+## Installazione di visual studio code https://code.visualstudio.com/download
