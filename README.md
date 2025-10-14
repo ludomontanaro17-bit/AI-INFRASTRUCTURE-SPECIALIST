@@ -347,7 +347,7 @@ echo "Installing ssh server on Machine"
 
 apt update
 apt install openssh-server -y 
-
+service ssh start
 echo "Enable root access"
 sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/s>
 sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
