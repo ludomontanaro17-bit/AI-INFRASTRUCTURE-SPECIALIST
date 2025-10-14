@@ -447,6 +447,29 @@ node server.js     # verifico se è andato con control+c si ferma
 Creo file docker con i comandi
 <img width="910" height="278" alt="Screenshot 2025-10-14 alle 15 24 10" src="https://github.com/user-attachments/assets/354ba058-e0f9-459c-9be5-7ec179ede5eb" />
 
+Spiegazione particolareggiata di 
+```bash
+FROM node:19-alpine
+
+COPY package.json /app/
+COPY . /app/
+
+WORKDIR /app
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["node","server.js"]
+```
+
+<img width="872" height="759" alt="Screenshot 2025-10-14 alle 15 47 18" src="https://github.com/user-attachments/assets/1b441ced-0653-4e06-82d6-f79512108314" />
+
+<img width="838" height="663" alt="Screenshot 2025-10-14 alle 15 47 26" src="https://github.com/user-attachments/assets/c8768bd6-a1d9-4c84-b307-93148eb29c58" />
+
+
+
+
 Creo una nuova immagine con 
 ```bash
 sudo docker build . 
@@ -477,9 +500,11 @@ Per verificare di avere effettivamente un'immagine
 docker images | grep app
 ```
 
-Runno l'immagine che ho
+
 
 <img width="639" height="81" alt="Screenshot 2025-10-14 alle 15 27 46" src="https://github.com/user-attachments/assets/14884f28-87a4-4c80-a0a7-e87a6fbdaa73" />
+
+Runno l'immagine che ho
 
 <img width="566" height="69" alt="Screenshot 2025-10-14 alle 15 41 09" src="https://github.com/user-attachments/assets/a0bcc765-bdb3-4ae6-b34c-7879960b4acd" />
 
