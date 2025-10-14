@@ -513,12 +513,14 @@ Ho dockerizzato completamente l'app se dall'indirizzo http://127.0.0.1:3000 esce
 
 <img width="995" height="163" alt="Screenshot 2025-10-14 alle 15 35 06" src="https://github.com/user-attachments/assets/3ce25cb8-5405-49c5-bbec-9c588ab33b61" />
 
-oppure se http://127.0.0.1:5001 esce
+oppure se da http://127.0.0.1:5001 esce
 
 <img width="993" height="137" alt="Screenshot 2025-10-14 alle 15 49 32" src="https://github.com/user-attachments/assets/931f8817-0125-4743-a210-003f15ae21f9" />
 
 
+Prova del nove: apro portainer con http://127.0.0.1:9443
 
+<img width="1290" height="156" alt="Screenshot 2025-10-14 alle 15 53 48" src="https://github.com/user-attachments/assets/99fdee50-eaa5-49e9-8523-c74891367e8e" />
 
 
 
