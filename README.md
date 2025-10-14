@@ -443,23 +443,50 @@ Prima di dockerizzare devo vedere se l'applicazione funziona
 ```bash
 node server.js     # verifico se è andato con control+c si ferma
 ```
-e mi deve riuscire 
+
+Creo file docker con i comandi
+<img width="910" height="278" alt="Screenshot 2025-10-14 alle 15 24 10" src="https://github.com/user-attachments/assets/354ba058-e0f9-459c-9be5-7ec179ede5eb" />
+
+Creo una nuova immagine con 
+```bash
+sudo docker build . 
+```
+
+Mi da questo errore 
+
+<img width="617" height="390" alt="Screenshot 2025-10-14 alle 15 17 42" src="https://github.com/user-attachments/assets/9ec2c51a-3674-4a86-b08e-a0854dffe0cd" />
+
+che ho risolto così
+
+<img width="637" height="120" alt="Screenshot 2025-10-14 alle 15 22 06" src="https://github.com/user-attachments/assets/c10aea8d-b940-47c1-9997-5f1c5439bc63" />
+
+Creo una README per delle istruzioni aggintive
+<img width="810" height="121" alt="Screenshot 2025-10-14 alle 15 26 21" src="https://github.com/user-attachments/assets/f1e3786f-0886-4f74-a82d-9a269bd1e4a2" />
+
+Creo un'immagine dal nome app-express-image
+```bash
+docker build -t app-express-image .
+```
+
+Mi crea effettivamente un'immagine
 
 
 
+Per verificare di avere effettivamente un'immagine
+```bash
+docker images | grep app
+```
+
+Runno l'immagine che ho
+
+<img width="639" height="81" alt="Screenshot 2025-10-14 alle 15 27 46" src="https://github.com/user-attachments/assets/14884f28-87a4-4c80-a0a7-e87a6fbdaa73" />
+
+<img width="566" height="69" alt="Screenshot 2025-10-14 alle 15 41 09" src="https://github.com/user-attachments/assets/a0bcc765-bdb3-4ae6-b34c-7879960b4acd" />
+
+Ho dockerizzato completamente l'app se dall'indirizzo http://127.0.0.1:3000 esce
 
 
-
-
-
-
-
-
-
-
-
-
-
+<img width="995" height="163" alt="Screenshot 2025-10-14 alle 15 35 06" src="https://github.com/user-attachments/assets/3ce25cb8-5405-49c5-bbec-9c588ab33b61" />
 
 
 
