@@ -363,6 +363,27 @@ chmode +x file.ssh   # setto i permessi
 
 
 ```
+## Poi cambia sempre la password dell'user con cui sto accedendo
+```bash
+passwd
+```
+```bash
+passwd [nome_utente]    # l'utente root può modificare le password degli altri utenti così
+```
+Mi fa capire che sono su due segmenti di rete diversi e quindi è ovvio che non potrò connettere le due macchine dato che la mia ha ip 192... e la macchina in questione 172...
+<img width="573" height="134" alt="Screenshot 2025-10-14 alle 10 58 29" src="https://github.com/user-attachments/assets/6bad68e6-f099-4dc0-b482-150e40301dab" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Installazione di visual studio code https://code.visualstudio.com/download
