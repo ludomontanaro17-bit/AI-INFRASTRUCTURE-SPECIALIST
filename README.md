@@ -313,7 +313,7 @@ ssh ludo@[id_macchina]
 ```
 Il collegamento è rifiutato se sono su segmenti di rete diversi.
 
-
+----------------------------------------------------------------
 
 
 
