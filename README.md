@@ -314,7 +314,7 @@ sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 adduser ludo
 ```
 ```bash
-ssh ludo@[id_macchina]
+ssh ludo@[id_ubuntu]
 ```
 Il collegamento è rifiutato se sono su segmenti di rete diversi.
 ## Mi collego dal container web_001 sul container ubuntu
@@ -322,8 +322,9 @@ Vado sulla shell di web_001
 ```bash
 apt update
 ```
+Se mi serve il client per collegarmi in ssh
 ```bash
-apt install openssh-client      # mi serve essere CLIENTE
+apt install openssh-client -y      
 ```
 ```bash
 ssh ludo@[id_di_ubuntu]
