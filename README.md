@@ -414,14 +414,20 @@ node -v
 
 Dentro ESEMPIO-APP-SERVER creo la cartella src dentro cui scrivo il file server.js
 <img width="980" height="420" alt="Screenshot 2025-10-14 alle 14 17 42" src="https://github.com/user-attachments/assets/2d8e1d17-3f2a-4551-9885-3dfa3576bdfb" />
-Dentro src -> package.json
+Dentro src -> package.json che è un oggetto
 <img width="961" height="202" alt="Screenshot 2025-10-14 alle 14 23 23" src="https://github.com/user-attachments/assets/2065b57d-7e85-472e-bce7-f0094ef8627c" />
 
 
 Gli attributi dell'oggetto sono:\
 -name \
 -version\
--dependencies ----> l'applicazione per andare ha bisogno che ci sia installato il framework xpress.js
+-dependencies ----> l'applicazione per andare ha bisogno che ci sia installato il framework express.js
+
+Apro il terminale 
+<img width="1340" height="137" alt="Screenshot 2025-10-14 alle 14 28 27" src="https://github.com/user-attachments/assets/5504d386-fefe-45e5-8b4c-1f812717b7e7" />
+
+<img width="755" height="280" alt="Screenshot 2025-10-14 alle 14 30 26" src="https://github.com/user-attachments/assets/6f85d53e-99ca-4eff-9ab1-f15706e53001" />
+
 
 
 
