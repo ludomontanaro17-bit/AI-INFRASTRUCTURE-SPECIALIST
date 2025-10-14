@@ -299,6 +299,11 @@ ping [id_macchina]
 ```bash
 ssh root@ [id_macchina] # di default va alla 22, altrimenti -p 22:22)
 ```
+## Per collegarmi con root devo abilitarla con il comando
+```bash
+sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+```
 ## Per collegarmi da remoto con un utente che ho creato
 ```bash
 adduser ludo
