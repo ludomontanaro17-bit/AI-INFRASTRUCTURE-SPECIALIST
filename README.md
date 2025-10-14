@@ -1,5 +1,9 @@
 # AI-INFRASTRUCTURE-SPECIALIST
 
+GITBOOK DI ROBERTO https://zafirogroup.gitbook.io/machine-learning/
+
+
+
 Cap 1 COMANDI LINUX <br>
 Cap 2 INTRODUZIONE ALLE RETI <br>
 Cap 3 DOCKER 
@@ -66,6 +70,7 @@ nc [IP] [numero_di_porta]                         # più potente di telnet
 
 
 # Capitolo 3 DOCKER 
+Installato dal sito docker, su docker.hub sono presenti i container.
 
 ```bash
 docker ps                        # mostra tutti i container attivi
@@ -263,6 +268,7 @@ mi esce che ho PIU' INTERFACCE DI RETE
 * Esercitazione 
 ## Installa ubuntu su portainer
 Cerco su templates -> applicazioni -> search: ubuntu -> configuro e deployt -> apro la shell con >_ \
+MAPPA LE PORTE DALL'INIZIO ALTRIMENTI DEVO FARE UN REPLACEMENT DEI CONTAINER E PERDO TUTTE LE COSE CHE HO INSTALLATO. (ALTRIMENTI VAI SU **duplicate/edit* -> MAPPO 22:22)
 **Configura e installa ssh:**
 ```bash
 apt get update
@@ -273,5 +279,37 @@ apt install -y openssh-server
 ```bash
 service ssh start 
 ```
+```bash
+service ssh status 
+```
+```bash
+which ssh     # per vedere dove si trova l'eseguibile ssh 
+```
+```bash
+passwd        # per modificare la passwd dell'utente root
+```
+```bash
+service ssh status 
+```
+```bash
+apt update
+apt install iputils-ping
+ping [id_macchina]
+```
+```bash
+ssh root@ [id_macchina] # di default va alla 22, altrimenti -p 22:22)
+```
+## Per collegarmi da remoto con un utente che ho creato
+```bash
+adduser ludo
+```
+```bash
+ssh ludo@[id_macchina]
+```
+Il collegamento è rifiutato se sono su segmenti di rete diversi.
+
+
+
+
 
 ## Installazione di visual studio code https://code.visualstudio.com/download
