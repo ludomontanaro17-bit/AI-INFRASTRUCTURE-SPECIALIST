@@ -423,17 +423,23 @@ Gli attributi dell'oggetto sono:\
 -version\
 -dependencies ----> l'applicazione per andare ha bisogno che ci sia installato il framework express.js
 
-Apro il terminale 
+Apro la power shell
 <img width="1340" height="137" alt="Screenshot 2025-10-14 alle 14 28 27" src="https://github.com/user-attachments/assets/5504d386-fefe-45e5-8b4c-1f812717b7e7" />
 
+Con questo comando installo tutte le dipendenze che occorrono per poter lavorare correttamente (in questo caso express)
+
+```bash
+cd src       # per entrare nella cartella
+```
+
+```bash
+sudo npm install     
+```
+```bash
+node server.js     # verifico se è andato
+```
+
 <img width="755" height="280" alt="Screenshot 2025-10-14 alle 14 30 26" src="https://github.com/user-attachments/assets/6f85d53e-99ca-4eff-9ab1-f15706e53001" />
-
-
-
-
-
-
-
 
 Quindi per vedere 'ok' devo scrivere su internet https://127.0.0.1:3000 \
 E per vedere 'Pagina dei contatti' devo scrivere su internet https://127.0.0.1:3000/contatti 
