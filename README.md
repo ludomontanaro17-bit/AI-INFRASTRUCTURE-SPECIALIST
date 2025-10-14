@@ -385,13 +385,17 @@ Se mi sono collegata bene dalla macchina web_001 sulla macchina ubuntu (con id 1
 # DOCKER CREATE IMAGES
 ## file sorgente -> build image -> runno il container
 Voglio deployare l'app come se fosse un container di docker.\
+Mettere un'applicazione sotto container serve per metterla sul mercato e renderla fruibile.
+<img width="632" height="602" alt="Screenshot 2025-10-14 alle 14 12 40" src="https://github.com/user-attachments/assets/83b22262-971c-4ff8-adbe-9116b9053cb8" />
+
 ## Scrivo il mio codice sorgente su Virtual Studio Code
 1) Installazione di visual studio code: https://code.visualstudio.com/download\ oppure da terminale 
 ```bash
 choco install vscode    # per Windows
 brew install vsce       # per Mac
 ```
-
+Con *Material Icon Theme* puoi impostare le icone colorate.\
+Con *control+s* salvo il codice!!!!!!!!!!!
 
 
 
@@ -408,8 +412,25 @@ Per verificare l'installazione questo codice dovrebbe ridare una cosa del tipo v
 node -v 
 ```
 
+Dentro ESEMPIO-APP-SERVER creo la cartella src dentro cui scrivo il file server.js
+<img width="980" height="420" alt="Screenshot 2025-10-14 alle 14 17 42" src="https://github.com/user-attachments/assets/2d8e1d17-3f2a-4551-9885-3dfa3576bdfb" />
+Dentro src -> package.json
+<img width="961" height="202" alt="Screenshot 2025-10-14 alle 14 23 23" src="https://github.com/user-attachments/assets/2065b57d-7e85-472e-bce7-f0094ef8627c" />
 
 
+Gli attributi dell'oggetto sono:\
+-name \
+-version\
+-dependencies ----> l'applicazione per andare ha bisogno che ci sia installato il framework xpress.js
+
+
+
+
+
+
+
+Quindi per vedere 'ok' devo scrivere su internet https://127.0.0.1:3000 \
+E per vedere 'Pagina dei contatti' devo scrivere su internet https://127.0.0.1:3000/contatti 
 
 
 
