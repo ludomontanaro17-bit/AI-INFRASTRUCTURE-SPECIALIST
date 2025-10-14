@@ -317,6 +317,17 @@ adduser ludo
 ssh ludo@[id_macchina]
 ```
 Il collegamento è rifiutato se sono su segmenti di rete diversi.
+## Mi collego dal container web_001 sul container ubuntu
+Vado sulla shell di web_001
+```bash
+apt update
+```
+```bash
+apt install openssh-client      # mi serve essere CLIENTE
+```
+```bash
+ssh ludo@[id_di_ubuntu]
+```
 
 ----------------------------------------------------------------
 
