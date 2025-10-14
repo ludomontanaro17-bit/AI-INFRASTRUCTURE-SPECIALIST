@@ -491,6 +491,9 @@ Creo un'immagine dal nome app-express-image
 docker build -t app-express-image .
 ```
 
+<img width="668" height="599" alt="Screenshot 2025-10-14 alle 16 17 24" src="https://github.com/user-attachments/assets/bc904116-f92d-4164-8381-495589f6c228" />
+
+
 Mi crea effettivamente un'immagine
 
 
@@ -508,6 +511,11 @@ Runno l'immagine che ho
 
 <img width="566" height="69" alt="Screenshot 2025-10-14 alle 15 41 09" src="https://github.com/user-attachments/assets/a0bcc765-bdb3-4ae6-b34c-7879960b4acd" />
 
+
+<img width="668" height="599" alt="Screenshot 2025-10-14 alle 16 17 24" src="https://github.com/user-attachments/assets/1eded9d5-8ddf-4ee6-ad9b-a2cdc2e9f943" />
+
+
+
 Ho dockerizzato completamente l'app se dall'indirizzo http://127.0.0.1:3000 esce
 
 
@@ -522,9 +530,9 @@ Prova del nove: apro portainer con http://127.0.0.1:9443
 
 <img width="1290" height="156" alt="Screenshot 2025-10-14 alle 15 53 48" src="https://github.com/user-attachments/assets/99fdee50-eaa5-49e9-8523-c74891367e8e" />
 
+e i due container che ho creato prima stanno runnando!
 
-
-
+-------------------------------------------------------
 
 
 
