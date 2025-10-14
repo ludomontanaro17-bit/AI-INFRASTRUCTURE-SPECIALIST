@@ -369,7 +369,7 @@ chmode +x file.ssh   # setto i permessi
 
 
 ```
-## Poi cambia sempre la password dell'user con cui sto accedendo
+ Poi cambia sempre la password dell'user con cui sto accedendo
 ```bash
 passwd
 ```
