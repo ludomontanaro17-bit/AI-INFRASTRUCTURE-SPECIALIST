@@ -588,10 +588,30 @@ python app.py
 Open a web browser and go to http://127.0.0.1:5000 to see the message "Hello, World!".
 ```
 
+<img width="669" height="244" alt="Screenshot 2025-10-14 alle 18 03 12" src="https://github.com/user-attachments/assets/853eaefd-aadc-44ee-9d1e-d29bd98072d8" />
+
+<img width="439" height="98" alt="Screenshot 2025-10-14 alle 18 03 16" src="https://github.com/user-attachments/assets/27cbeee1-8034-43ba-80e7-4c56c3e3d462" />
+
+<img width="434" height="411" alt="Screenshot 2025-10-14 alle 18 20 53" src="https://github.com/user-attachments/assets/db5d8e23-0d6a-40e0-9da9-469aa1c2c94f" />
 
 
 
+Per vedere se il programma app.py gira in locale
+```bash
+chmod u+x app.py
+./app.py
 
+```
+
+Per creare l'immagine flask-app
+```bash
+docker build -t flask-app .
+```
+
+Per creare il container usando questa immagine con mapping di porte 5555:5555
+```bash
+docker run -p 5555:5555 flask-app
+```
 
 
 
