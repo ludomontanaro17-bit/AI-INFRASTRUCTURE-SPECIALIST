@@ -641,7 +641,7 @@ Verificare che sia attivo\
 Nel container costruisci una crontab per fare backup (mysql dump) periodici del database 
 Crea persistenza per salvarmi i backup in questione.
 
-1) scarico il container mysql da templates di portainer e METTI LA PASSWORD DI RADICE SENNO POI DA UN ERRORE
+1) scarico il container mysql da templates di portainer e METTI LA PASSWORD DI RADICE SENNO POI DA UN ERRORE ALLA FINE DI TUTTO!
 
 <img width="773" height="82" alt="Screenshot 2025-10-15 alle 15 14 08" src="https://github.com/user-attachments/assets/76adb1fa-00ac-4df4-8b2b-cbbcc74dea3a" />
 
