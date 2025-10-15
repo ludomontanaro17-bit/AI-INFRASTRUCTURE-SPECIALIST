@@ -762,7 +762,28 @@ ls /backups/                 # vedo i backups
 ## Esercitazione:
 Creare un container usando l'immagine debian/ubuntu con le seguenti caratteristiche:
 - 2 volumi per la gestione di queste cartelle : /var/log/ (cercalo) e /dev-python (che devi costruire nel primo edit del container)
+
+<img width="873" height="233" alt="Screenshot 2025-10-15 alle 15 31 35" src="https://github.com/user-attachments/assets/ff4c7427-e6da-466c-b3a2-09a03f7b8919" />
+
+Mappo i due volumi direttamente alla creazione del container.\
+NOTA: avrei potuto inserire il path di quello da far persistere anche senza cartella creata (eventualmente poi creo la cartella o il path direttamente nel container). In questo caso, infatti non ero sicura dell'esistenza di /dev-python ma ho comunque potuto creare il volume con /dev-python come path/in/container.
+
 - ssh attivo raggiungibile  ( x : 22 )
+  
+  per la sua mappatura uso 
+<img width="371" height="49" alt="Screenshot 2025-10-15 alle 15 31 47" src="https://github.com/user-attachments/assets/db831b87-a2b6-43ef-9c35-7daf96f185db" />
+
+e poi do in ordine i seguenti comandi 
+
+```bash
+apt update
+apt install openssh-server -y
+service ssh start
+```
+
+
+
+
 - il container deve fare parte della rete di host 172.17.1.x
 
 
