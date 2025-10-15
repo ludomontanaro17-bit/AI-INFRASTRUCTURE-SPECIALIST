@@ -781,6 +781,12 @@ apt install openssh-server -y
 service ssh start
 ```
 
+Dopo aver
+- restartato i due container
+- attivato in entrambi ssh\
+  ho collegato da remoto i due container e mi è uscito fuori questo. Ho potuto fare un collegamento in remoto perchè giravano sullo stesso segmento di rete.
+
+<img width="681" height="361" alt="Screenshot 2025-10-15 alle 16 20 52" src="https://github.com/user-attachments/assets/ce552ce3-990f-4d9d-a8dc-7e3201bcb21e" />
 
 
 
