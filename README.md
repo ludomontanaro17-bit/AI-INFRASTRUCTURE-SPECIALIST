@@ -545,7 +545,7 @@ e i due container che ho creato prima stanno runnando!
 
 -------------------------------------------------------
 
-**Esercitazione**
+## Esercitazione
 TASK: dockerizza l'applicazione in python
 
 ```bash
@@ -641,7 +641,11 @@ Verificare che sia attivo\
 Nel container costruisci una crontab per fare backup (mysql dump) periodici del database 
 Crea persistenza per salvarmi i backup in questione.
 
-1) scarico il container mysql da templates di portainer
+1) scarico il container mysql da templates di portainer e METTI LA PASSWORD DI RADICE SENNO POI DA UN ERRORE
+
+<img width="773" height="82" alt="Screenshot 2025-10-15 alle 15 14 08" src="https://github.com/user-attachments/assets/76adb1fa-00ac-4df4-8b2b-cbbcc74dea3a" />
+
+
 2) apro la console ma vedo che è in *bash-4.2* quindi avrò dei comandi diversi (ad esempio apt non c'è)
 3) 
  ```bash
