@@ -545,8 +545,7 @@ e i due container che ho creato prima stanno runnando!
 
 -------------------------------------------------------
 
-## Esercitazione
-TASK: dockerizza l'applicazione in python
+## Esercitazione: dockerizza l'applicazione in python
 
 ```bash
 Example Code
@@ -635,7 +634,7 @@ docker run -d -p 5555:5555 flask-app
 
 ---------------------------------------------------------------------
 
-## Esercitazione
+## Esercitazione: CRONTAB SU MYSQL 
 Scarico il container mySql\         (da portainer lo faccio)
 Verificare che sia attivo\
 Nel container costruisci una crontab per fare backup (mysql dump) periodici del database 
