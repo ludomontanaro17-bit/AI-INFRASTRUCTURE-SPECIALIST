@@ -228,10 +228,16 @@ Invece di verificare una ad una se le macchine siano connesse con ping posso fae
 ```bash
 nmap -v -sn 192.168.1.1-255     # scansionami gli indirizzi nel segmento di rete da 1 a 255
 ```
-
+oppure 
+```bash
+nmap -v -sn 192.168.1.1/24    # scansionami gli indirizzi nel segmento di rete da 1 a 255
+```
 ## Istruzioni per creare una sottorete:
 ```bash
 docker network create rete-nginx 
+```
+```bash
+docker run -d --name nginx 1 --network rete-nginx -p 8080:80 nginx:latest
 ```
 -----------------------------------------------
 
