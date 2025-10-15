@@ -29,7 +29,165 @@ grep -r "funzione"                        # cerco la stringa funzione in tutti i
 grep -n "warning" file.txt                # mostra le righe in cui appare warning e i numeri di riga
 grep -i "esempio" file.txt                # cerco ignorando maiuscole e minuscole
 ```
+## Esercitazioni varie dell'accademy
+1. Mostrare il nome del sistema operativo. umane
+2. Visualizzare tutte le informazioni sul sistema operativo. Uname -a
+3. Mostrare chi è attualmente connesso al sistema. Who 
+4. Visualizzare il nome utente corrente. whoami
+5. Mostrare la directory di lavoro corrente. pwd
+6. Elencare i file e le directory presenti nella cartella corrente. ls
+7. Elencare tutti i file, inclusi quelli nascosti, con dettagli. ls -la
+8. Creare una nuova directory chiamata “esercizi”. Mkdir esercizi
+9. Entrare nella directory “esercizi”. Cd esercizi
+10. Creare tre file vuoti chiamati “file1.txt”, “file2.txt” e “file3.txt”. Touch file{1..3}.txt
+11. Creare una directory chiamata “backup”. mkdir backup
+12. Copiare un file dentro la directory “backup”. cp file1.txt backup
+13. Spostare un file nella directory “backup”. mv file2.txt backup
+14. Rinominare un file. Mv file3.txt myfile3.txt
+15. Visualizzare i file presenti nella directory “backup”. ls backup/
+16. Tornare alla directory principale dell’utente. Cd ..
+17. Tornare alla directory precedente. Cd -
+18. Creare una sottocartella dentro una directory già esistente. mkdir -p backup/nuova (oppure fai cd e crei la nuova directory) 
+Se scrivo mkdir -p backup/nuova/docs e poi tree esce l’albero 
+Il -p serve per farle annidate le cartelle 
+19. Eliminare un file. Rm file1.txt
+20. Eliminare una directory e il suo contenuto. rm -r backup/
+21. Creare e modificare un file di testo con un editor. Nano bello.txt 
+22. Visualizzare il contenuto di un file. Cat bello.txt
+23. Unire il contenuto di due file in un nuovo file. 
+24. Aggiungere il contenuto di un file alla fine di un altro.
+25. Contare quante righe contiene un file.
+26. Salvare l’elenco dei file della directory corrente dentro un file di testo.
+27. Leggere il manuale del comando per elencare i file.
+28. Leggere il manuale del comando per copiare i file.
+29. Leggere il manuale del comando per rimuovere i file.
+30. Mostrare le informazioni sull’utente corrente e sugli altri utenti connessi. NOTA : CERCARE &&
+--------------------------------------------
+1-ripulire tutta la home directory rm -rf /home/user
+1. Mostrare il nome del sistema operativo in uso.
+2. Visualizzare chi è attualmente connesso al sistema.
+3. Visualizzare il nome dell’utente corrente.
+4. Mostrare la directory di lavoro corrente.
+5. Creare una directory chiamata “progetto”.
+6. Entrare nella directory “progetto”.
+7. Creare due file vuoti chiamati “app.txt” e “readme.txt”.
+8. Elencare i file presenti nella directory corrente.
+9. Copiare il file “readme.txt” in una nuova directory chiamata “backup”.
+10. Rinominare il file “app.txt” in “main.txt”.
+11. Visualizzare il contenuto di “readme.txt”.
+12. Aggiungere il contenuto di “readme.txt” alla fine di “main.txt”.
+13. Eliminare il file “readme.txt”.
+14. Leggere il manuale del comando che serve per copiare i file.
+15. Tornare alla directory principale dell’utente.
+--------------------------------------------
+1. Mostrare la directory corrente.
+2. Creare una directory chiamata “progetto”.
+3. Entrare nella directory “progetto”.
+4. Creare tre file vuoti chiamati “uno.txt”, “due.txt” e “tre.txt”.
+5. Elencare i file della directory corrente in formato dettagliato.
+6. Copiare il file “uno.txt” nella directory principale dell’utente.
+7. Rinominare il file “due.txt” in “bozza.txt”.
+8. Spostare il file “tre.txt” in una nuova directory chiamata “archivio”.
+9. Eliminare il file “bozza.txt”.
+10. Eliminare la directory “archivio” e tutto il suo contenuto.
+11. Visualizzare il contenuto di “uno.txt”.
+12. Creare un file di testo e scrivere all’interno una frase con l’editor `nano`.
+13. Aggiungere una seconda riga di testo nello stesso file usando la redirezione `>>`.
+14. Sovrascrivere il contenuto del file con una nuova frase usando `>`.
+15. Creare un nuovo file chiamato “lista.txt” e salvare dentro l’elenco dei file della directory corrente.
+16. Cercare un file chiamato “uno.txt” a partire dalla directory principale.
+17. Cercare tutti i file con estensione `.txt` nella directory “progetto”.
+18. Modificare i permessi di “uno.txt” per renderlo eseguibile.
+19. Creare uno script `saluto.sh` che visualizzi a schermo “Ciao dal terminale!”.
+20. Rendere eseguibile lo script `saluto.sh`.
+21. Eseguire lo script `saluto.sh` dalla directory corrente.
+22. Creare uno script `backup.sh` che copi tutti i file `.txt` in una directory “backup”.
+23. Lanciare un comando in background usando `&`.
+24. Usare `htop` per monitorare i processi in esecuzione.
+25. Terminare un processo tramite il comando `kill`.
+26. Eseguire due comandi consecutivi solo se il primo ha successo, utilizzando `&&`.
+27. Leggere il manuale del comando `cp`.
+28. Leggere il manuale del comando `chmod`.
+29. Creare una directory “test” e spostarsi al suo interno con un solo comando.
+30. Creare un file `info.txt`, scrivere dentro il risultato del comando `pwd` e aggiungere successivamente l’elenco dei file con `>>`.
+--------------------------------------------
+stampare le info del pc 
 
+vedere tutti gli utenti connessi 
+
+Mostrare la directory di lavoro corrente.
+
+Creare una directory chiamata “laboratorio”.
+
+Entrare nella directory “laboratorio”.
+
+Creare tre file vuoti: “file1.txt”, “file2.txt” e “file3.txt”.
+
+Elencare i file e le cartelle della directory corrente in formato dettagliato.
+
+Creare una sottocartella chiamata “backup”.
+
+Copiare “file1.txt” dentro la directory “backup”.
+
+Spostare “file2.txt” nella directory “backup”.
+
+Rinominare “file3.txt” in “note.txt”.
+
+Eliminare il file “note.txt”.
+
+Creare un file di testo con nano e scrivere una frase.
+
+Visualizzare il contenuto del file appena creato.
+
+Salvare l’elenco dei file della directory corrente dentro un file chiamato “lista.txt”.
+
+Aggiungere il nome utente corrente in fondo a “lista.txt”.
+
+Find Cercare un file chiamato “file1.txt” a partire dalla directory “laboratorio”.
+
+Cercare tutti i file con estensione .txt nella directory “laboratorio”.
+
+Modificare i permessi di “file1.txt” rendendolo eseguibile.
+
+Creare uno script chiamato “ciao.sh” che visualizzi la scritta “Ciao Linux!”.
+
+Rendere eseguibile lo script “ciao.sh”.
+
+Eseguire lo script “ciao.sh”.
+
+Creare uno script “duplica.sh” che copi tutti i file .txt in “backup/”.
+
+Eseguire un comando in background con &.
+
+Eseguire due comandi consecutivi solo se il primo ha successo, usando &&.
+
+Visualizzare i processi in esecuzione con htop.
+
+Identificare un processo e terminarlo con kill.
+
+Usare la redirezione > per creare un file con il risultato di un comando.
+
+Usare la redirezione >> per aggiungere il risultato di un comando a un file esistente.
+
+Tornare alla directory principale dell’utente.
+
+a cosa serve il comando ping , traceroute , nmap ?
+cosa sono i numeri di porta e quanti sono ?
+a cosa corrisponde la porta 22 , 80 , 443 ?
+
+--------------------------------------------
+Come funziona il comando pipe in LINUX | ?
+come funziona il comando il comando grep ?
+range di indirizzi ip
+classi di indirizzi privati e loro natura
+a cosa serve un indirizzo ip ?
+cosa si intende per indirizzo ip v4 e ipv6?
+cosa si intende per port forwarding?
+differenze principali tra virtualizzazione e container , cosa utilizza docker
+in docker cosa si intende per porta pubblica e porta privata ?
+a cosa serve il comando ping ? quale protocollo utilizza
+a cosa servono le porte , e quante sono ?
+a cosa serve ifconfig , traceroute ?
 
 # Capitolo 2 INTRODUZIONE ALLE RETI 
 ```bash
@@ -768,6 +926,9 @@ Creare un container usando l'immagine debian/ubuntu con le seguenti caratteristi
 Mappo i due volumi direttamente alla creazione del container.\
 NOTA: avrei potuto inserire il path di quello da far persistere anche senza cartella creata (eventualmente poi creo la cartella o il path direttamente nel container). In questo caso, infatti non ero sicura dell'esistenza di /dev-python ma ho comunque potuto creare il volume con /dev-python come path/in/container.
 
+In /var/log ci sono i *file di log* che sono documenti creati dai sistemi operativi, dalle applicazioni e dai vari servizi per registrare eventi e attività. Questi file svolgono un ruolo cruciale nel monitoraggio, nella diagnostica e nella sicurezza.
+
+
 - ssh attivo raggiungibile  ( x : 22 )
   
   per la sua mappatura uso 
@@ -790,7 +951,7 @@ Dopo aver
 
 
 
-- il container deve fare parte della rete di host 172.17.1.x
+(- il container deve fare parte della rete di host 172.17.1.x)
 
 
 
