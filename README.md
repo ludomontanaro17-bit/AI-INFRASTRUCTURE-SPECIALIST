@@ -693,13 +693,45 @@ docker volume create mysql-delete
 
 ciò significa che avrò persistenza dei dati contenuti in /backups
 
-10) riapro la console del container 
+10) riapro la console del container
+
+
+11) 
+    
 ```bash
 yum install -y cronie
-```
-```bash
 
 ```
+
+```bash
+systemctl start crond
+```
+ma rida errore 
+```bash
+Failed to get D-Bus connection: Operation not permitted
+```
+```bash
+ crontab -e   # ma da errore perchè non ho installato nano (lo avevo fatto sull'altro container ma l'ho rieditato)
+```
+```bash
+yum install nano -y
+export EDITOR=nano
+crontab -e
+```
+Poi mi si apre crontab e ci metto il crontab che voglio:
+
+<img width="305" height="44" alt="Screenshot 2025-10-15 alle 14 53 45" src="https://github.com/user-attachments/assets/bf5b03d2-1f93-47e8-8ba0-54ae013b43da" />
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+https://docs.n8n.io/hosting/installation/docker/
+
 
 
 
