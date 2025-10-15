@@ -228,6 +228,7 @@ nc [IP] [numero_di_porta]                         # più potente di telnet
 
 
 # Capitolo 3 DOCKER 
+https://www.youtube.com/watch?v=1fL54Q-wa54
 Installato dal sito docker, su docker.hub sono presenti i container.
 
 ```bash
@@ -956,6 +957,8 @@ Dopo aver
 
 
 
+# PROMETHUS
+https://prometheus.io/ E https://www.youtube.com/watch?v=r2A-flkDGJ0
 
 
 
