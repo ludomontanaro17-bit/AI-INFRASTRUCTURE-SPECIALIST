@@ -154,6 +154,7 @@ Per vedere se funziona -> DEPLOY THE CONTAINERS
 Per aprirlo sul web http//127.0.0.1 (posso non inserire il numero di porta perchè coincide con quella privata)
 
 ## Modifica la pagina di benvenuto di nginx con "Ciao sono Ludovica"
+Accedo a questa pagina da http://127.0.0.1:8080
 ```bash
 docker exec -it [container_id] /bin/bash # per aprire la shell del container
 ```
@@ -593,6 +594,12 @@ Copia codice
 python app.py
 Open a web browser and go to http://127.0.0.1:5000 to see the message "Hello, World!".
 ```
+Per un'applicazione Python ho bisogno di:
+- main.py
+- Dockerfile
+- requirements.txt
+
+
 
 <img width="669" height="244" alt="Screenshot 2025-10-14 alle 18 03 12" src="https://github.com/user-attachments/assets/853eaefd-aadc-44ee-9d1e-d29bd98072d8" />
 
@@ -604,19 +611,32 @@ Open a web browser and go to http://127.0.0.1:5000 to see the message "Hello, Wo
 
 Per vedere se il programma app.py gira in locale
 ```bash
-chmod u+x app.py
-./app.py
+brew install python
+python3 --version    # mi da la versione
+pip3   --version
+```
+```bash
+cd src
+python3 main.py
 
 ```
+
+Non girava probabilmente perchè non era indentata
+
+<img width="411" height="230" alt="Screenshot 2025-10-15 alle 09 43 00" src="https://github.com/user-attachments/assets/8873ca26-ae74-4140-aea6-5d2702b1b79e" />
+
+
+<img width="451" height="97" alt="Screenshot 2025-10-15 alle 09 55 22" src="https://github.com/user-attachments/assets/a21065c4-34e1-4890-82ca-f321243451ba" />
+Il primo indirizzo IP è per vederlo dal mio computer, il secondo è per farlo vedere dal computer di altri.
 
 Per creare l'immagine flask-app
 ```bash
 docker build -t flask-app .
 ```
 
-Per creare il container usando questa immagine con mapping di porte 5555:5555
+Per creare il container usando l'immagine flask-app con mapping di porte 5555:5555
 ```bash
-docker run -p 5555:5555 flask-app
+docker run -d -p 5555:5555 flask-app
 ```
 
 
