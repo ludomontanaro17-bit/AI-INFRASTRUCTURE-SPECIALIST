@@ -688,11 +688,12 @@ cp backup.sh /var/lib/mysql
 docker volume create mysql-delete
 ```
  9) duplico il container in questione e vado ad aggiungere un'ulteriore mappatura di volume specificando il path nel container
-     
-<img width="800" height="242" alt="Screenshot 2025-10-15 alle 13 39 31" src="https://github.com/user-attachments/assets/b7f19f8b-bd99-40be-b7d0-66475140ed8e" />
 
+<img width="804" height="243" alt="Screenshot 2025-10-15 alle 13 42 23" src="https://github.com/user-attachments/assets/efb2652b-d7e0-42e9-8381-102fc86ff49b" />
 
-10) 
+ciò significa che avrò persistenza dei dati contenuti in /backups
+
+10) riapro la console del container 
 
 
 
