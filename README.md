@@ -694,7 +694,12 @@ docker volume create mysql-delete
 ciò significa che avrò persistenza dei dati contenuti in /backups
 
 10) riapro la console del container 
+```bash
+yum install -y cronie
+```
+```bash
 
+```
 
 
 
