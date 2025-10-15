@@ -594,8 +594,9 @@ Copia codice
 python app.py
 Open a web browser and go to http://127.0.0.1:5000 to see the message "Hello, World!".
 ```
+
 Per un'applicazione Python ho bisogno di:
-- main.py
+- main.py (o app.py, in base all'esempio in questione)
 - Dockerfile
 - requirements.txt
 
@@ -610,23 +611,16 @@ Per un'applicazione Python ho bisogno di:
 
 
 Per vedere se il programma app.py gira in locale
-```bash
-brew install python
-python3 --version    # mi da la versione
-pip3   --version
-```
+
 ```bash
 cd src
 python3 main.py
 
 ```
-
-Non girava probabilmente perchè non era indentata
-
-<img width="411" height="230" alt="Screenshot 2025-10-15 alle 09 43 00" src="https://github.com/user-attachments/assets/8873ca26-ae74-4140-aea6-5d2702b1b79e" />
-
+Dovrebbe uscire questo:
 
 <img width="451" height="97" alt="Screenshot 2025-10-15 alle 09 55 22" src="https://github.com/user-attachments/assets/a21065c4-34e1-4890-82ca-f321243451ba" />
+
 Il primo indirizzo IP è per vederlo dal mio computer, il secondo è per farlo vedere dal computer di altri.
 
 Per creare l'immagine flask-app
