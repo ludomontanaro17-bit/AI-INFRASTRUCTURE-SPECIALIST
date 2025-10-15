@@ -628,10 +628,75 @@ Per creare l'immagine flask-app
 docker build -t flask-app .
 ```
 
-Per creare il container usando l'immagine flask-app con mapping di porte 5555:5555
+Per creare il container runno l'immagine flask-app con mapping di porte 5555:5555
 ```bash
 docker run -d -p 5555:5555 flask-app
 ```
+
+---------------------------------------------------------------------
+
+**Esercitazione**
+Scarico il container mySql\         (da portainer lo faccio)
+Verificare che sia attivo\
+Nel container costruisci una crontab per fare backup (mysql dump) periodici del database 
+Crea persistenza per salvarmi i backup in questione.
+
+1) scarico il container mysql da templates di portainer
+2) apro la console ma vedo che è in *bash-4.2* quindi avrò dei comandi diversi (ad esempio apt non c'è)
+3) 
+ ```bash
+uname -a 
+```
+e metto sulla ai per capire con quale comando installare i software e i comandi. In questo caso
+ ```bash
+uname -a
+```
+```bash
+yum install update
+yum install nano -y
+```
+4) creo un file in bash per i comandi
+ ```bash
+nano backup.sh
+```   
+
+<img width="770" height="119" alt="Screenshot 2025-10-15 alle 12 35 24" src="https://github.com/user-attachments/assets/c7096099-1f78-4b7b-9e2a-0ff6b1aa0a11" />
+
+5) permessi
+ ```bash
+chmod +x backup.sh
+```  
+ ```bash
+ls -la    
+```
+6) lo runno con
+```bash
+./backup.sh 
+```
+ma non c'è la cartella quindi la creo a mano con
+ ```bash
+mkdir /backups
+```
+ora se riprovo a runnare il file in bash va
+
+7) prima di creare un volume per far persistere i dati di backup salvo questo script sull'altro volume creato automaticamente all'avvio del container mysql (lo vedi se clicchi sul container:
+```bash
+cp backup.sh /var/lib/mysql
+```
+ 8) creo un nuovo volume 
+```bash
+docker volume create mysql-delete
+```
+ 9) duplico il container in questione e vado ad aggiungere un'ulteriore mappatura di volume specificando il path nel container
+     
+<img width="800" height="242" alt="Screenshot 2025-10-15 alle 13 39 31" src="https://github.com/user-attachments/assets/b7f19f8b-bd99-40be-b7d0-66475140ed8e" />
+
+
+10) 
+
+
+
+
 
 
 
