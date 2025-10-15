@@ -729,7 +729,7 @@ oppure potevo modificare il file backup.sh con un ciclo for
 while true; do
 
         TIMESTAMP=$(date +"%Y%m%d%H%M")
-        BACKUP_FILE="/backup/backup_$TIMESTAMP.sql"
+        BACKUP_FILE="/backups/backup_$TIMESTAMP.sql"
 
         mysqldump -u root --password=root --all-databases > $BACKUP_FILE
 
