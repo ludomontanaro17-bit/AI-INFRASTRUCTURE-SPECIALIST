@@ -722,8 +722,33 @@ Poi mi si apre crontab e ci metto il crontab che voglio:
 
 <img width="305" height="44" alt="Screenshot 2025-10-15 alle 14 53 45" src="https://github.com/user-attachments/assets/bf5b03d2-1f93-47e8-8ba0-54ae013b43da" />
 
+oppure potevo modificare il file backup.sh con un ciclo for 
+```bash
+#!/bin/bash
+
+while true; do
+
+        TIMESTAMP=$(date +"%Y%m%d%H%M")
+        BACKUP_FILE="/backup/backup_$TIMESTAMP.sql"
+
+        mysqldump -u root --password=root --all-databases > $BACKUP_FILE
+
+        sleep 300
+
+done
+```
 
 
+
+
+
+12)
+```bash
+/var/lib/mysql/backup.sh &   # per lanciare il comando 
+```
+```bash
+ls /backups/                 # vedo i backups
+```
 
 
 
