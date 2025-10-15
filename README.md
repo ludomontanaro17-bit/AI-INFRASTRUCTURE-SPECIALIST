@@ -758,6 +758,46 @@ ls /backups/                 # vedo i backups
 
 
 ------------------------------------------------------------------------
+
+## Esercitazione:
+Creare un container usando l'immagine debian/ubuntu con le seguenti caratteristiche:
+- 2 volumi per la gestione di queste cartelle : /var/log/ (cercalo) e /dev-python (che devi costruire nel primo edit del container)
+- ssh attivo raggiungibile  ( x : 22 )
+- il container deve fare parte della rete di host 172.17.1.x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://docs.n8n.io/hosting/installation/docker/
 
 
